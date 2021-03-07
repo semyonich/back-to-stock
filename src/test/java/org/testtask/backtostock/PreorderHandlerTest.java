@@ -1,4 +1,4 @@
-package org.testtask.backtostock.tests;
+package org.testtask.backtostock;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;

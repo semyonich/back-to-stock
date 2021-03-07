@@ -1,16 +1,15 @@
 package org.testtask.backtostock.service.impl;
 
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 import org.testtask.backtostock.exception.UserNotFoundException;
 import org.testtask.backtostock.model.PriorityCalculationContainer;
 import org.testtask.backtostock.model.PriorityCalculationContainer.PriorityType;
 import org.testtask.backtostock.model.Product;
 import org.testtask.backtostock.model.User;
 import org.testtask.backtostock.service.PreorderHandler;
-
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
 
 public class PreorderHandlerImpl implements PreorderHandler {
     private final Map<PriorityType, Map<String, List<User>>> priorityMap;
@@ -27,7 +26,8 @@ public class PreorderHandlerImpl implements PreorderHandler {
     }
 
     public void addPreorder(User user, Product product) {
-        PriorityCalculationContainer container = new PriorityCalculationContainer(user, product).init();
+        PriorityCalculationContainer container = new PriorityCalculationContainer(user, product)
+                .init();
         if (priorityMap.get(container.getPriority()).containsKey(product.getName())) {
             priorityMap.get(container.getPriority()).get(product.getName()).add(user);
             return;

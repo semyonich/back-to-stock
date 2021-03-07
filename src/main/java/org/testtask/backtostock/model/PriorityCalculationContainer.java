@@ -1,7 +1,9 @@
 package org.testtask.backtostock.model;
 
+import lombok.Data;
 import org.testtask.backtostock.model.User.UserStatus;
 
+@Data
 public class PriorityCalculationContainer {
     public enum PriorityType {
         HIGH,
@@ -16,18 +18,6 @@ public class PriorityCalculationContainer {
     public PriorityCalculationContainer(User user, Product product) {
         this.user = user;
         this.product = product;
-    }
-
-    public PriorityType getPriority() {
-        return priority;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public Product getProduct() {
-        return product;
     }
 
     public PriorityCalculationContainer init() {
