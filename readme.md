@@ -13,9 +13,10 @@ Rules:
 - FIFO for all the rest
 
 ##How to run<br>
-Open Application class, create User and Product objects with correct values,
-make an instance of PreorderHandlerImpl class. Now you can call his method
-addPreorder(User user, Product product) to make preorder of product for user.
-Calling method getUser(Product product) only returns user, who made preorder of this product.
-Calling method getUserRemovePreorder(Product product) returns user, who made preorder 
+Open Application class, create _User_ and _Product_ objects with correct values,
+make an instance of _PreorderHandlerImpl_ class and call method _init()_ on this instance.<br>
+_PreorderHandler handler = new PreorderHandlerImpl().init();_<br>
+Now you can call his method _addPreorder(User user, Product product)_ to make preorder of product for user.
+Calling method _getUser(Product product)_ only returns user, who made preorder of this product.
+Calling method _getUserRemovePreorder(Product product)_ returns user, who made preorder 
 of this product and removes preorder for this user.
