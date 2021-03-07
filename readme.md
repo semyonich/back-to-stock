@@ -1,4 +1,4 @@
-##Back-To-Stock
+##Back-To-Stock <br>
 This project is came to solve next real business task:
 
 Our customer AmazingCo asked to let users to subscribe products that are out of stock.
